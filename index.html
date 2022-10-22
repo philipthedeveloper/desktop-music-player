@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/font-awesome.css" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharps"
+      rel="stylesheet"
+    />
+    <script>
+      window.onload = function () {
+        const InnerWidth = window.innerWidth;
+        if (InnerWidth < 1200) {
+          document.write(
+            "This web application is only available for device about 1200px width"
+          );
+        }
+      };
+    </script>
+    <script src="./app.js" defer></script>
+    <title>Desktop Music Player</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="left">
+        <h1>Songify</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">
+                <span class="material-icons-outlined"> home </span>Home</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="material-icons-round"> favorite_border </span>
+                Liked Songs</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><span class="material-icons-outlined"> library_music </span
+                >Your Library</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="search">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search"
+          /><span class="material-icons-round"> search </span>
+        </div>
+        <button id="create_playlist">
+          <span class="material-icons-round"> add </span>Create new playlist
+        </button>
+        <aside>
+          <ul>
+            <li><a href="#">No Cap</a></li>
+            <li><a href="#">Trap land</a></li>
+            <li><a href="#">Party Hits 2000s</a></li>
+            <li><a href="#">Top Gaming Tracks</a></li>
+            <li><a href="#">Designers Playlist</a></li>
+            <li><a href="#">Good Vibes</a></li>
+            <li><a href="#">This is Wiz Khalifa</a></li>
+            <li><a href="#">Ultimate Classic Party</a></li>
+          </ul>
+        </aside>
+        <footer>
+          <div class="profile-image"></div>
+          <p id="my_profile">My profile</p>
+        </footer>
+        <i class="fa fa-angle-left left_angle"></i>
+      </div>
+      <div class="right">
+        <header id="right_header">
+          <h2>Specially For You</h2>
+
+          <div class="prev_next">
+            <span class="material-icons-outlined"> grid_view </span>
+            <i class="fa fa-angle-left prev"></i>
+            <i class="fa fa-angle-right next"></i>
+          </div>
+        </header>
+
+        <div class="tracks">
+          <div class="track">
+            <p class="favourites">
+              <span class="material-icons-round"> favorite </span>1,393,340
+            </p>
+            <p class="track_name">Video Game Music</p>
+            <p class="track_num">105 tracks</p>
+          </div>
+          <div class="track">
+            <p class="favourites">
+              <span class="material-icons-round"> favorite </span>93,725
+            </p>
+            <p class="track_name">Indie Pop</p>
+            <p class="track_num">146 tracks</p>
+          </div>
+          <div class="track">
+            <p class="favourites">
+              <span class="material-icons-round"> favorite </span>1,618,827
+            </p>
+            <p class="track_name">Retro 80's</p>
+            <p class="track_num">78 tracks</p>
+          </div>
+        </div>
+
+        <div class="master_flex">
+          <div class="playlist">
+            <header class="playlist_header">
+              <h2>Playlist</h2>
+              <a href="#">Show All</a>
+            </header>
+
+            <div class="list">
+              <header id="header">
+                <div class="number_grid">
+                  <p id="track_number">NO</p>
+                </div>
+                <div class="track_details">
+                  <p id="track_title">Title</p>
+                  <p id="artist_name">Artist</p>
+                  <p id="track_duration">Duration</p>
+                  <p id="album_name">Album</p>
+                </div>
+              </header>
+            </div>
+            <div class="controls">
+              <div class="upper">
+                <button id="favIcon">
+                  <span class="material-icons-round"> favorite_border </span>
+                </button>
+                <div class="top_controls">
+                  <button id="shuffle">
+                    <span class="material-icons-round"> shuffle </span>
+                  </button>
+                  <button id="prev">
+                    <span class="material-icons-round"> skip_previous </span>
+                  </button>
+                  <button id="play">
+                    <span class="material-icons-round"> play_arrow </span>
+                  </button>
+                  <!-- <button id="pause">
+                    <span class="material-icons-round"> pause </span>
+                  </button> -->
+                  <button id="next">
+                    <span class="material-icons-round"> skip_next </span>
+                  </button>
+                  <button id="repeat">
+                    <span class="material-icons-round"> repeat </span>
+                  </button>
+                </div>
+                <div class="volume_controls">
+                  <span class="material-icons-round"> volume_down </span>
+                  <input
+                    type="range"
+                    min="0"
+                    value="30"
+                    max="100"
+                    id="volume_range"
+                  />
+                  <span class="material-icons-round"> volume_up </span>
+                </div>
+              </div>
+              <div class="lower">
+                <p id="current_duration">00 : 00</p>
+                <input type="range" id="current_time" value="0" max="100" />
+                <p id="total_duration">00 : 00</p>
+              </div>
+            </div>
+          </div>
+          <div class="genres">
+            <h2>Genres</h2>
+            <div class="genre-container">
+              <ul>
+                <li>Hip-Hop</li>
+                <li>Jazz</li>
+                <li>Bluz</li>
+                <li>Dram&Bass</li>
+                <li>Latino</li>
+                <li>Falk Music</li>
+                <li>Electric</li>
+                <li>Dubstep</li>
+                <li>Country</li>
+                <li>Retro</li>
+                <li>Sleep</li>
+                <li>Pop</li>
+                <li>Underground rap</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
